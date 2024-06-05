@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block title %}
+      <title>Ticker Maker</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+    <div style="display: block; text-align: center; margin-top: 40px;">
+      <header>Make a ticker</header>
+      <input placeholder="Text for a ticker" id="textbox">
+      <button onclick="send()">Make</button>
+    </div>
+    {% endblock %}
+
+    {% block extrahead %}
+    <script>
+      
+      function send() {
+
+        let input = document.querySelector('#textbox').value
+        
+        window.location.replace(input)
+      }
+    </script>
+    {% endblock extrahead %}
+  </body>
+</html>
